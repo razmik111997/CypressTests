@@ -4,7 +4,7 @@ import { registration } from "../pages/autoExercise/SignUp";
 let userName, secondUserName;
 describe("SignIn", () => {
   beforeEach(() => {});
-  it("Verify login functionality with valid credentials 1", () => {
+  it.only("Verify login functionality with valid credentials 1", () => {
     registration.visit("login");
     registration.getUsername().type(registration.generateRandomName(5, ""));
     registration
@@ -14,6 +14,7 @@ describe("SignIn", () => {
         userName = val
         cy.log(userName);
       });
+      cy.wait(20000)
     registration
       .getEmail()
       .type(registration.generateRandomName(5, "@gmail.com"));
@@ -27,7 +28,7 @@ describe("SignIn", () => {
       registration.getTitle1();
       registration
         .getPassword()
-        .type(registration.generateRandomName(5, "@gmail.com"));
+        .type(autoExerciseData.Password);
         registration.getDay().select(autoExerciseData.Day);
         registration.getMonth().select(autoExerciseData.Month);
         registration.getYear().select(autoExerciseData.Year);
@@ -36,13 +37,14 @@ describe("SignIn", () => {
         registration.getFirstName().type(registration.generateRandomName(11,""));
         registration.getLastName().type(registration.generateRandomName(8,""));
         registration.getCompany().type(registration.generateRandomName(8,""));
-        registration.getAddress().type(registration.generateRandomName(10,""));
-        registration.getAddress2().type(registration.generateRandomName(15,""));
+        registration.getFirstAddress().type(registration.generateRandomName(10,""));
+        registration.getSecondAddress().type(registration.generateRandomName(15,""));
         registration.getCountry().select('United States');
         registration.getState().type(registration.generateRandomName(6,""));
         registration.getCity().type(registration.generateRandomName(6,""));
         registration.getZipCode().type(registration.generateRandomName(13,""))
         registration.getMobileNumber().type(registration.generateRandomName(10,""));
+        cy.wait(50000)
         registration.CreateAccount().click();
     });
     it("Verify login functionality with valid credentials 2", () => {
@@ -77,8 +79,8 @@ describe("SignIn", () => {
           registration.getFirstName().type(registration.generateRandomName(11,""));
           registration.getLastName().type(registration.generateRandomName(8,""));
           registration.getCompany().type(registration.generateRandomName(8,""));
-          registration.getAddress().type(registration.generateRandomName(10,""));
-          registration.getAddress2().type(registration.generateRandomName(15,""));
+          registration.getFirstAddress().type(registration.generateRandomName(10,""));
+          registration.getSecondAddress().type(registration.generateRandomName(15,""));
           registration.getCountry().select('United States');
           registration.getState().type(registration.generateRandomName(6,""));
           registration.getCity().type(registration.generateRandomName(6,""));
@@ -115,8 +117,8 @@ describe("SignIn", () => {
             registration.getFirstName().type(registration.generateRandomName(11,""));
             registration.getLastName().type(registration.generateRandomName(8,""));
             registration.getCompany().type(registration.generateRandomName(8,""));
-            registration.getAddress().type(registration.generateRandomName(10,""));
-            registration.getAddress2().type(registration.generateRandomName(15,""));
+            registration.getFirstAddress().type(registration.generateRandomName(10,""));
+            registration.getSecondAddress().type(registration.generateRandomName(15,""));
             registration.getCountry().select('United States');
             registration.getState().type(registration.generateRandomName(6,""));
             registration.getCity().type(registration.generateRandomName(6,""));

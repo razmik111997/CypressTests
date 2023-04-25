@@ -1,0 +1,78 @@
+class ProductsCheck {
+  getWomen() {
+    return cy.get('[data-parent="#accordian"]').eq(0);
+  }
+  getCategory() {
+    return cy.get(".left-sidebar > h2");
+  }
+  getWomenPanelBody() {
+    return cy.get("#Women > .panel-body");
+  }
+  getMen() {
+    return cy.get('[data-parent="#accordian"]').eq(1);
+  }
+  getMenPanelBody() {
+    return cy.get("#Men > .panel-body");
+  }
+  getKids() {
+    return cy.get('[data-parent="#accordian"]').eq(2);
+  }
+  getKidsPanelBody() {
+    return cy.get("#Kids > .panel-body");
+  }
+  getPoloCount() {
+    return cy.get(".nav > :nth-child(1) > a > .pull-right");
+  }
+  getPolo() {
+    return cy.get(".brands-name > .nav > :nth-child(1) > a");
+  }
+  getProductOverlay() {
+    return cy.get(".product-overlay");
+  }
+  getHandMCount() {
+    return cy.get(".nav > :nth-child(2) > a > .pull-right");
+  }
+  getHandM() {
+    return cy.get(".brands-name > .nav > :nth-child(2) > a");
+  }
+  getMadameCount() {
+    return cy.get(".nav > :nth-child(3) > a > .pull-right");
+  }
+  getMadame() {
+    return cy.get(".brands-name > .nav > :nth-child(3) > a");
+  }
+  getMastandHarbourCount() {
+    return cy.get(".nav > :nth-child(4) > a > .pull-right");
+  }
+  getMastandHarbour() {
+    return cy.get(".brands-name > .nav > :nth-child(4) > a");
+  }
+  getBabyHugCount() {
+    return cy.get(".nav > :nth-child(5) > a > .pull-right");
+  }
+  getBabyHug() {
+    return cy.get(".brands-name > .nav > :nth-child(5) > a");
+  }
+  getAllenSollyJuniorCount() {
+    return cy.get(".nav > :nth-child(6) > a > .pull-right");
+  }
+  getAllenSollyJunior() {
+    return cy.get(".brands-name > .nav > :nth-child(6) > a");
+  }
+  getKookieKidsCount() {
+    return cy.get(".nav > :nth-child(7) > a > .pull-right");
+  }
+  getKookieKids() {
+    return cy.get(".brands-name > .nav > :nth-child(7) > a");
+  }
+  getBibaCount() {
+    return cy.get(".nav > :nth-child(8) > a > .pull-right");
+  }
+  getBiba() {
+    return cy.get(".brands-name > .nav > :nth-child(8) > a");
+  }
+  getScrollButton() {
+    return cy.get('#scrollUp')
+  }
+}
+export const productsCheck = new ProductsCheck();
