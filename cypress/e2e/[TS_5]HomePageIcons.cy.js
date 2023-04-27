@@ -1,21 +1,27 @@
-import { HomePage } from "../pages/autoExercise/Home";
-import {SignUp} from "../pages/autoExercise/SignUp"
+import {homePage} from "../pages/autoExercise/Home";
+import {registration} from "../pages/autoExercise/SignUp"
 describe("Homepage and Icons", () => {
     it("Loads the homepage and checks for icons", () => {
-     SignUp.visit();
-     HomePage.getShopMenu().click();
+     registration.visit();
       cy.url().should('include','/')
       })
-    });
   
   it("Loads the Products and check for icons", () => {
-    SignUp.visit(products);
-    cy.get(".shop-menu > .nav > :nth-child(2)").click();
-    cy.url().should('include','products')
-    cy.get('.logo').find('img').should('have.attr', 'src').should('include','/static/images/home/logo.png')
+   registration.visit("products");
+     cy.url().should('include','products')
+     cy.get('.logo').find('img').should('have.attr', 'src').should('include','/static/images/home/logo.png')
   });
   
   it("Loads the Cart", () => {
-   SignUp.visit(view_cart);
-    cy.get(".shop-menu > .nav > :nth-child(3) > a").click();
+   registration.visit("view_cart");
+     cy.url().should('include','view_cart')
   });
+  it('Load the Test Cases', () =>{
+   registration.visit("test_cases");
+    cy.url().should('include','test_cases')
+    })
+    it('Load Contact us click', () =>{
+      registration.visit("contact_us")
+       cy.url().should('include','contact_us')
+    })
+  })

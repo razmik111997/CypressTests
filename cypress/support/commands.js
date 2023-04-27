@@ -27,3 +27,6 @@
 
 
 // //  })
+Cypress.Commands.add('openHomePage', () => {
+    cy.visit(Cypress.env("globalUrl"));
+})

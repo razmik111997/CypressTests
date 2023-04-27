@@ -23,10 +23,10 @@ class SignUp {
   getCompany() {
     return cy.get('[data-qa="company"]');
   }
-  getAddress() {
+  getFirstAddress() {
     return cy.get('[data-qa="address"]');
   }
-  getAddress2() {
+  getSecondAddress() {
     return cy.get('[data-qa="address2"]');
   }
   getCountry() {

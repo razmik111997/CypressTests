@@ -51,5 +51,22 @@ export const homeAttributes = {
   Month: 'November',
   Year: '1997',
   State: 'New York',
-  City: 'New York'
+  City: 'New York',
+  Password: 'RMaa181197',
+  ExpiryMonth:"11",
+  ExpiryYear: "2025",
+  CVC: "695",
+  CardName:"Historical",
+  CardNumber:"4502555121455278",
+  FirstText: "Added!",
+  SecondText:"Your product has been added to cart.",
+  CheckoutFirstText:"Checkout",
+  CheckoutSecondText:"Register / Login account to proceed on checkout.",
+  EmailAddress:"testbjKQA@gmail.com",
+  Comment:"Thank you very much",
+  DataTestCaseBtn:"Test Cases",
+  DataApisBtn:"APIs list for practice",
+  CaruselsThirdText:"All QA engineers can use this website for automation practice and API testing either they are at beginner or advance level. This is for everybody to help them brush up their automation skills",
+  CaruselsSecondText:"Full-Fledged practice website for Automation Engineers",
+  CaruselsFirstText:"Automation"
  }
