@@ -4,7 +4,7 @@ import { registration } from "../pages/autoExercise/SignUp";
 let userName, secondUserName;
 describe("SignIn", () => {
   beforeEach(() => {});
-  it.only("Verify login functionality with valid credentials 1", () => {
+  it("Verify login functionality with valid credentials 1", () => {
     registration.visit("login");
     registration.getUsername().type(registration.generateRandomName(5, ""));
     registration
@@ -142,4 +142,3 @@ describe("SignIn", () => {
     registration.submit().click();
 })
 });
-
